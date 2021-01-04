@@ -23,7 +23,7 @@
 * 您必须在下载后的24小时内从计算机或手机中完全删除以上内容.
 
 ### 特别感谢 ：
-* [@NobyDa](https://github.com/NobyDa)
+* [@NobyDa](https://github.com/NobyDa) 起是
 
 * [@lhie1](https://github.com/lhie1)
 
