@@ -9,40 +9,17 @@
 * 只测试自用脚本，其他大部分脚本未测试可用性.
 
 ### 特别感谢 ：
+* [@chavyleung](https://github.com/chavyleung/scripts/tree/master/rrtv) 人人视频签到，目前唯一一个手机上跑的签到脚本
+
 * [@NobyDa](https://github.com/NobyDa) 起是
 
-* [@lhie1](https://github.com/lhie1)
+* [@lhie1](https://github.com/lhie1/Rules/tree/master)
 
-* [@ConnersHua](https://github.com/DivineEngine)
+* [@ConnersHua](https://github.com/DivineEngine/Profiles/tree/master)
 
-* [@chavyleung](https://github.com/chavyleung)
+* [@chavyleung](https://github.com/chavyleung/scripts/tree/master)
 
-* [@yichahucha](https://github.com/yichahucha)
+* [@yichahucha](https://github.com/yichahucha/surge/tree/master)
 
-* [@langkhach270389](https://github.com/langkhach270389)
+* [@Choler](https://github.com/Choler/Surge/tree/master)
 
-* [@Choler](https://github.com/Choler)
-
-* [@onewayticket255](https://github.com/onewayticket255)
-
-* [@NavePnow](https://github.com/NavePnow)
-
-* [@Meeta](https://github.com/MeetaGit)
-
-* [@Neurogram-R](https://github.com/Neurogram-R)
-
-* [@sazs34](https://github.com/sazs34)
-
-* [@id77](https://github.com/id77)
-
-* [@lxk0301](https://github.com/lxk0301)
-
-* [@红鲤鱼与绿鲤鱼与驴](https://github.com/wangdelu2020)
-
-* [@iisams](https://github.com/iisams/Scripts)
-
-* [@barrym-chen](https://github.com/barrym-chen/Script)
-
-* [@ziye12](https://github.com/ziye12/JavaScript)
-
-* [@公众号墨鱼手记](https://github.com/ddgksf2013)
