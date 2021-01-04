@@ -21,11 +21,6 @@
 
 * [@ikanam](https://github.com/ikanam/Surge-Scripts) 115离线
 
+* [@Choler](https://github.com/Choler/Surge/tree/master) 抖音-Ads
+
 * [@lhie1](https://github.com/lhie1/Rules/tree/master)
-
-* [@chavyleung](https://github.com/chavyleung/scripts/tree/master)
-
-* [@Choler](https://github.com/Choler/Surge/tree/master)
-
-
-
