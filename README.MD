@@ -23,3 +23,5 @@
 
 * [@Choler](https://github.com/Choler/Surge/tree/master)
 
+* [@blackmatrix7](https://github.com/blackmatrix7/ios_rule_script) 知乎助手&bilibili -AD
+
