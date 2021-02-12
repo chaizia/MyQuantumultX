@@ -11,7 +11,6 @@ rufus.ie
 geph.io
 *.googleusercontent.com
 *.google.com
-www.google.com
 18board.com
 greasyfork.org
 testflight.apple.com
