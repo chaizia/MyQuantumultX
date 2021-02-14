@@ -1,6 +1,7 @@
 ;注释 Apple
 testflight.apple.com
 ;注释 Google
+*.google.com
 *.appspot.com
 *.blogger.com
 *.getoutline.org
@@ -8,8 +9,6 @@ testflight.apple.com
 *.gvt3.com
 *.xn--ngstr-lra8j.com
 *.ytimg.com
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,.blogspot.
 ;注释 Microsoft
 *.aka.ms
 *.onedrive.live.com
