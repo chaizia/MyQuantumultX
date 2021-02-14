@@ -1,0 +1,105 @@
+;注释 Apple
+testflight.apple.com
+;注释 Google
+*.appspot.com
+*.blogger.com
+*.getoutline.org
+*.gvt0.com
+*.gvt3.com
+*.xn--ngstr-lra8j.com
+*.ytimg.com
+DOMAIN-KEYWORD,google
+DOMAIN-KEYWORD,.blogspot.
+;注释 Microsoft
+*.aka.ms
+*.onedrive.live.com
+az416426.vo.msecnd.net
+az668014.vo.msecnd.net
+;注释 Facebook
+*.cdninstagram.com
+*.facebook.com
+*.facebook.net
+*.fb.com
+*.fb.me
+*.fbaddins.com
+*.fbcdn.net
+*.fbsbx.com
+*.fbworkmail.com
+*.instagram.com
+*.m.me
+*.messenger.com
+*.oculus.com
+*.oculuscdn.com
+*.rocksdb.org
+*.whatsapp.com
+*.whatsapp.net
+;注释 Twitter
+*.pscp.tv
+*.periscope.tv
+*.t.co
+*.twimg.co
+*.twimg.com
+*.twitpic.com
+*.twitter.com
+*.vine.co
+;注释 Telegram
+*.telegra.ph
+*.telegram.org
+*.t.me
+*.tdesktop.com
+*.telegram.me
+*.telesco.pe
+;注释 Amazon
+*.amazon.co.jp
+d3c33hcgiwev3.cloudfront.net
+payments-jp.amazon.com
+*.amazonaws.com
+;注释 维基百科
+*.wikileaks.org
+*.wikimapia.org
+*.wikimedia.org
+*.wikinews.org
+*.wikipedia.org
+*.wikiquote.org
+*.wikiwand.com
+;注释 雅虎
+*.yahoo.com
+;注释 App Store Preview
+apps.apple.com
+itunes.apple.com
+;注释 Netflix
+*.netflix.com
+*.netflix.net
+*.nflxext.com
+*.nflximg.com
+*.nflximg.net
+*.nflxso.net
+*.nflxvideo.net
+*.netflixdnstest?.com
+;注释 Pornhub
+*.phncdn.com
+*.phprcdn.com
+*.pornhub.com
+*.pornhubpremium.com
+;注释 YouTube
+*.googlevideo.com
+*.youtube.com
+*.ytimg.com
+youtubei.googleapis.com
+yt3.ggpht.com
+;注释 Others
+*.github.com
+*.github.io
+*.githubusercontent.com
+*.quora.com
+*.quoracdn.net
+*.t66y.com
+*.torproject.org
+*.tumblr.com
+*.v2fly.org
+*.v2ray.com
+securelist.com
+www.javlibrary.com
+www.javbus.com
+*.18board.com
+91porn.com
