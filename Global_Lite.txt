@@ -8,7 +8,7 @@ testflight.apple.com
 *.gvt0.com
 *.gvt3.com
 *.xn--ngstr-lra8j.com
-*.ytimg.com
+*.googleusercontent.com
 ;注释 Microsoft
 *.aka.ms
 *.onedrive.live.com
