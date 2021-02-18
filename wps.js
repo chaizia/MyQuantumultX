@@ -9,6 +9,8 @@ http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,max-size=
 hostname = account.wps.cn
 */
 
+console.log($response.body)
+
 var obj = JSON.parse($response.body);
 
 var id = obj.userid;
