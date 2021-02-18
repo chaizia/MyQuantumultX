@@ -1,12 +1,6 @@
 #屏蔽IOS更新，来源如下再增补
-#https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/Extra/Apple/BlockiOSUpdate.list
-DOMAIN, ocsp.int-x3.letsencrypt.org, REJECT
-DOMAIN, ipsw.me, REJECT
-DOMAIN, world-gen.g.aaplimg.com, REJECT
-DOMAIN, ns.itunes.apple.com, REJECT
-DOMAIN, updates-http.cdn-apple.com, REJECT
-DOMAIN, appldnld.apple.com, REJECT
-DOMAIN, mesu.apple.com, REJECT
-DOMAIN, xp.apple.com, REJECT
-DOMAIN, ocsp.apple.com, REJECT
-DOMAIN, gdmf.apple.com, REJECT
+#https://j.mp/3auFuTy
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
