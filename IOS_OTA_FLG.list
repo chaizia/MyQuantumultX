@@ -36,3 +36,8 @@ DOMAIN-SUFFIX,yam.com,REJECT
 DOMAIN-SUFFIX,ltn.com.tw,REJECT
 DOMAIN-SUFFIX,mpweekly.com,REJECT
 DOMAIN-SUFFIX,cup.com.hk,REJECT
+
+#other
+DOMAIN,hm.baidu.com,REJECT
+DOMAIN-KEYWORD,php?ad,REJECT
+
