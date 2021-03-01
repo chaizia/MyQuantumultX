@@ -27,3 +27,6 @@
 * [@Choler](https://github.com/Choler/Surge/tree/master) 抖音-Ads
 
 * [@lhie1](https://github.com/lhie1/Rules/tree/master)
+
+* [@ddgksf2013](https://github.com/ddgksf2013/Cuttlefish/tree/master/Rewrite) crack VIP
+
