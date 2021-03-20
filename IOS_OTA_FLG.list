@@ -42,3 +42,4 @@ DOMAIN,hm.baidu.com,REJECT
 DOMAIN-KEYWORD,php?ad,REJECT
 DOMAIN-SUFFIX,handanxinkai.com,REJECT
 DOMAIN-SUFFIX,jianxinshanghai.com,REJECT
+DOMAIN-SUFFIX,gtv.org,REJECT
