@@ -24,7 +24,7 @@
 
 * [@ikanam](https://github.com/ikanam/Surge-Scripts) 115离线
 
-* [@Choler](https://github.com/Choler/Surge/tree/master) 抖音-Ads
+* [@Choler](https://github.com/Choler/Surge/tree/master) 抖音-Ads，人人视频去广告
 
 * [@lhie1](https://github.com/lhie1/Rules/tree/master)
 
