@@ -1,0 +1,32 @@
+# 需要配置 CA 证书并启用 MitM 开关.
+# 您可以在使用后手动将本模块禁用，以免产生不必要的MITM.
+# 整合 BoxJs、京东淘宝比价、奈飞评分、哔哩哔哩签到、网易云签到
+# 哔哩哔哩在APP里观看番剧即可获取
+# 网易云音乐获取方式:先登录: https://music.163.com/m/login,再访问: https://music.163.com/#/user/level
+# 获取完Cookie请自行禁用获取脚本
+
+[Script]
+# > 访问: http://boxjs.com管理
+http-request ^https?://boxjs.com(/api|/home|/sub|/my|/app|/log|/revert)?($|\/) script-path=https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js, requires-body=true, timeout=120, tag=BoxJs
+
+# > 京东比价京粉转链
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path=https://raw.githubusercontent.com/HoCooo/Loon/main/JdJf_price.js, requires-body=true, timeout=10, tag=京东价格返利
+
+# > 京东淘宝比价
+http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, tag=京东比价
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, tag=淘宝比价
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js, tag=京东比价
+
+# > 奈飞评分
+http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js, tag=奈飞评分
+http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/warmer/.+type=show-ath requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating_season.js, tag=单集评分
+
+# > 哔哩哔哩签到
+http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, tag=哔哩哔哩Cookie获取
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, tag=哔哩哔哩签到
+
+# > 网易云音乐签到
+http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,requires-body=true, tag=网易云Cookie获取
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js, tag=网易云签到
+
+hostname = ios.prod.ftl.netflix.com, api.bilibili.com, app.bilibili.com, *.bilibili.com, api.m.jd.com, trade-acs.m.taobao.com, music.163.com
