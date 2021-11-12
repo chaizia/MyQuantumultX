@@ -30,3 +30,7 @@
 
 * [@ddgksf2013](https://github.com/ddgksf2013/Cuttlefish/tree/master/Rewrite) crack VIP
 
+* [@ddgksf2013](https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/Rrtv.conf) 人人视频VIP
+
+* [@app2smile](https://github.com/app2smile/rules) 贴吧去广告
+
