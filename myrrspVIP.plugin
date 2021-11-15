@@ -1,0 +1,12 @@
+[URL Rewrite]
+# 人人视频 去广告&水印
+# https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/Rrtv.conf
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail\?(.+)quality=\w+(.+) 302 https://api.rr.tv/drama/app/get_combined_drama_detail?(.+)quality=AI_OD(.+)
+
+[Script]
+http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js, requires-body=true, timeout=10, tag=人人视频VIP
+http-response ^https:\/\/api\.rr\.tv\/ad\/getAll script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js, requires-body=true, timeout=10, tag=人人视频VIP
+http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js, requires-body=true, timeout=10, tag=人人视频VIP
+
+[MITM]
+hostname = api.rr.tv
