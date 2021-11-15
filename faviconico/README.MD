@@ -5,4 +5,6 @@
 
 ### 几个常用机场的favicon.ico
 
-### 修改成了144*144的png，供Quantumult X和loon调用
+### 修改成了144X144的png，供Quantumult X和loon调用
+
+### ico转png在线网站: https://www.aconvert.com/cn/image/ico-to-png/
