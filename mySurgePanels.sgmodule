@@ -4,6 +4,7 @@
 
 [Panel]
 NetflixController = script-name=NetflixController, update-interval=600 
+DisneyController = script-name=DisneyController, update-interval=600 
 
 [Script]
 #应该修改的字段 netflixGroup
@@ -11,3 +12,9 @@ NetflixController = type=generic, script-path=https://raw.githubusercontent.com/
 NetflixChecker = type=cron,cronexp=* 10 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixchecker.js,script-update-interval=86400,control-api=1
 #捷径执行
 NetflixShortcut = type=cron,cronexp=* 10 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixshortcut.js,script-update-interval=86400,control-api=1
+
+#应该修改的字段 disneyGroup
+DisneyController = type=generic, script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneycontroller.js, timeout=3600,argument=icon1=checkmark.circle&color1=#55ba94&icon2=cursorarrow.click.badge.clock&color2=#ed6c84&icon3=xmark.shield&color3=#AF52DE&disneyGroup=🎞Disney++
+DisneyChecker = type=cron,cronexp=* 10 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneychecker.js,script-update-interval=86400,control-api=1
+#捷径执行
+DisneyShortcut = type=cron,cronexp=* 10 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/DisneySelect/disneyshortcut.js,script-update-interval=86400,control-api=1
