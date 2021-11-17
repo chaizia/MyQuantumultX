@@ -1,8 +1,11 @@
 #!name=NetflixController
-#!desc=Netflix 策略控制器
+#!desc=Netflix 策略控制器和Panel重载配置
 
 
 [Panel]
+#Surge Pro标题,可显示启动时间,点击刷新为重载配置
+SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile,update-interval=1
+
 NetflixController = script-name=NetflixController, update-interval=600 
 
 [Script]
