@@ -34,7 +34,7 @@
 
 * [@app2smile](https://github.com/app2smile/rules) 贴吧去广告
 
-* [@fishingworld](https://github.com/fishingworld/something) Surge Panel脚本
+* [@fishingworld](https://github.com/fishingworld/something/tree/main/NetflixSelect) Surge Panel脚本，自动切换可用的奈飞线路
 
 * [@Orz-3](https://github.com/Orz-3/mini) 可用图标
 
