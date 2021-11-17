@@ -1,0 +1,50 @@
+#!name=柴子Surge高级设置
+#!desc=高级设置及通用的 URL 重定向优化（如 Google 搜索及地图、AbeamTV 区域限制等），常用的脚本
+
+[MITM]
+hostname = api.m.jd.com,trade-acs.m.taobao.com,app.bilibili.com,wmapi.meituan.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,*.amemv.com,aweme.snssdk.com,api.rr.tv
+
+[Script]
+# 淘宝比价
+淘宝比价1 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,script-update-interval=0
+淘宝比价2 = type=http-request,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,max-size=0,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,script-update-interval=0
+# 京东比价
+京东比价 = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,max-size=0,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,script-update-interval=86400
+
+BiliBili_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
+
+京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+
+美团外卖_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+
+百度网盘VIP = type=http-response,requires-body=1,max-size=0,pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js
+
+WPS解锁VIP = type=http-response,requires-body=1,max-size=0,pattern=^https://account.wps.*/api/users/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+
+彩云天气VIP = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/caiyun.js
+
+115离线1 = type=http-response,requires-body=1,max-size=0,pattern=^http:\/\/115\.com\/lx.*$,script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js
+
+115离线2 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/webapi\.115\.com\/user\/check_sign.*$,script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js
+
+抖音去水印 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,script-path=https://Choler.github.io/Surge/Script/douyin.js
+
+人人视频VIP1 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.rr\.tv\/user\/privilege\/list,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
+
+人人视频VIP2 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.rr\.tv\/ad\/getAll,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
+
+人人视频VIP3 = type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
+
+[URL Rewrite]
+^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
+
+^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/ reject
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
+^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
+^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail\?(.+)quality=\w+(.+) https://api.rr.tv/drama/app/get_combined_drama_detail?(.+)quality=AI_OD(.+) 302
+
