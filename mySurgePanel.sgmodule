@@ -1,5 +1,5 @@
-#!name=NetflixController
-#!desc=Netflix策略控制器
+#!name=Netflix/DisneyPlus Controller
+#!desc=Netflix/DisneyPlus 策略控制器
 
 
 [Panel]
