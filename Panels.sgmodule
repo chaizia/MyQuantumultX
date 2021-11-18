@@ -9,4 +9,4 @@ Sub_info = script-name=Sub_info,update-interval = 43200
 
 #机场信息
 #必须修改的字段:你encode后的机场订阅链接
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=[URL encode https://subscribe.a9b.top/link/lAnozTWZkx0WvoMQ?sub=2]&reset_day=1&title=ExFlux&icon=opticaldisc&color=#5AC8FA
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js ,script-update-interval=0,argument=url=[URL encode https://subscribe.a9b.top/link/lAnozTWZkx0WvoMQ?list=surge]&reset_day=1&title=ExFlux&icon=opticaldisc&color=#5AC8FA
