@@ -28,11 +28,11 @@ NetflixController = type=generic, script-path=https://raw.githubusercontent.com/
 # 捷径执行
 NetflixShortcut = type=cron,cronexp=0 10 * * *,wake-system=0,timeout=3600,script-path=https://raw.githubusercontent.com/fishingworld/something/main/NetflixSelect/netflixshortcut.js,script-update-interval=86400,control-api=1
 
-淘宝比价1 = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,max-size=0,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,script-update-interval=0
+京东比价 = type=http-response,requires-body=1,max-size=0,pattern=^http://.+/amdc/mobileDispatch,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
-淘宝比价2 = type=http-request,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,max-size=0,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,script-update-interval=0
+淘宝比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
-京东比价 = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),requires-body=1,max-size=0,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js,script-update-interval=86400
+京东比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 
 京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
 
