@@ -1,7 +1,6 @@
    
 #!name=油管儿去广告@DivineEngine
 #!desc=仅用于视频广告，不适用允许 UDP 转发的节点及 Premium。
-#!system=ios
 
 [URL Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)&ctier=L(&.+) $1&ctier=A$2 header
