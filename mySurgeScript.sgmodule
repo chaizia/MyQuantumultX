@@ -2,13 +2,13 @@
 #!desc=常用淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音等相关脚本。
 
 [MITM]
-hostname = %APPEND% www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,api*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,grpc.biliapi.net
+hostname = www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,api*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,grpc.biliapi.net
 
 [Script]
 # 比价脚本
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
-http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
-http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
+jd_price.js = type=http-response,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig),requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+tb_price.js = type=http-request,pattern=^http://.+/amdc/mobileDispatch,requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+tb_price.js = type=http-response,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
 # 百度网盘
 http-response https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js
 # WPS
