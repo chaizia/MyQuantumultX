@@ -1,8 +1,8 @@
 #!name=英俊柴Surge个人集
-#!desc=淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音相关脚本。
+#!desc=淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音、油管相关脚本。
 
 [MITM]
-hostname = api.m.jd.com,trade-acs.m.taobao.com,wmapi.meituan.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com
+hostname = api.m.jd.com,trade-acs.m.taobao.com,wmapi.meituan.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com-redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,www.google.cn
 
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
@@ -53,6 +53,10 @@ BiliBili_个人中心精简2 = type=http-response,requires-body=1,max-size=0,pat
 BiliBili_个人中心精简3 = type=http-response,requires-body=1,max-size=0,pattern=https://api.bilibili.com/x/v2/reply/main\?access_key,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20reply.js
 
 [URL Rewrite]
+# Redirect Google Search/Maps Service
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+
 # 115网盘签到变离线
 ^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
 # 抖音去广告无水印
@@ -77,3 +81,9 @@ BiliBili_个人中心精简3 = type=http-response,requires-body=1,max-size=0,pat
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject
 
+# 仅用于YouTube视频广告，不适用允许 UDP 转发的节点及Premium，By@DivineEngine
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)&ctier=L(&.+) $1&ctier=A$2 header
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
