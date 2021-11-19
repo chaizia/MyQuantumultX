@@ -1,8 +1,8 @@
-#!name=英俊柴Surge个人集
-#!desc=淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音、油管相关脚本。
+#!name=柴子Surge4常用组合
+#!desc=淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音等相关脚本。
 
 [MITM]
-hostname = api.m.jd.com,trade-acs.m.taobao.com,wmapi.meituan.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com-redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,www.google.cn
+hostname = www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,wmapi.meituan.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com
 
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
@@ -69,6 +69,7 @@ BiliBili_个人中心精简3 = type=http-response,requires-body=1,max-size=0,pat
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail\?(.+)quality=\w+(.+) https://api.rr.tv/drama/app/get_combined_drama_detail?(.+)quality=AI_OD(.+) 302
+
 # BiliBili去除搜索中的大家都在搜
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words - reject
 # BiliBili去除动态中的话题
@@ -81,9 +82,4 @@ BiliBili_个人中心精简3 = type=http-response,requires-body=1,max-size=0,pat
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash - reject
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash - reject
 
-# 仅用于YouTube视频广告，不适用允许 UDP 转发的节点及Premium，By@DivineEngine
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)&ctier=L(&.+) $1&ctier=A$2 header
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
+
