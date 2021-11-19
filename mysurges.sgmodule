@@ -1,5 +1,5 @@
-#!name=柴子Surge高级设置
-#!desc=高级设置、重定向、Vip脚本、Panel设置
+#!name=英俊柴Surge个人集
+#!desc=淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音相关脚本。
 
 [MITM]
 hostname = api.m.jd.com,trade-acs.m.taobao.com,wmapi.meituan.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,api.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,ap?.bilibili.com
