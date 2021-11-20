@@ -1,8 +1,8 @@
 #!name=请叫我英俊柴
-#!desc=常用淘宝、京东、B站、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音等相关脚本。
+#!desc=常用淘宝、京东、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音等相关脚本。
 
 [MITM]
-hostname = %APPEND% www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,api*.amemv.com,aweme.snssdk.com,api.rr.tv,app.bilibili.com,grpc.biliapi.net
+hostname = %APPEND% www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,api*.amemv.com,aweme.snssdk.com,api.rr.tv
 
 [Script]
 # 比价脚本
@@ -25,11 +25,6 @@ douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]
 http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
 http-response ^https:\/\/api\.rr\.tv\/ad\/getAll requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
 http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
-# B站开屏页广告,推荐页广告,动态(推荐话题和列表广告),视频播放页面(up主推荐广告,相关推荐广告)
-bili-json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js,script-update-interval=0
-bili-proto = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js,script-update-interval=0
-# B站tab精简
-http-response https://app.bilibili.com/x/resource/show/tab\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20tab.js
 
 [URL Rewrite]
 # Redirect Google Search/Maps Service
