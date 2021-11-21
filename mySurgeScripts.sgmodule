@@ -32,7 +32,8 @@ http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requ
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
 # 115网盘签到变离线
 ^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
-# 抖音去广告无水印
+# 抖音去开屏去广告无水印
+^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/ reject
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
 # 人人视频
 ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail\?(.+)quality=\w+(.+) https://api.rr.tv/drama/app/get_combined_drama_detail?(.+)quality=AI_OD(.+) 302
