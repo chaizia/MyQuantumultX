@@ -20,7 +20,7 @@ http-response ^http:\/\/115\.com\/lx.*$ requires-body=1,script-path=https://raw.
 http-response ^https?:\/\/webapi\.115\.com\/user\/check_sign.*$ requires-body=1,script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js
 # 抖音去水印 需搭配重写
 douyin = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v[12]\/((|follow\/|nearby\/)feed|aweme\/post|hot\/search\/video\/list|mix\/aweme|aweme\/detail)\/\?,requires-body=1,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js
-# 人人视频 需搭配重写
+# 人人视频VIP 需搭配重写
 http-response ^https:\/\/api\.rr\.tv\/user\/privilege\/list requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
 http-response ^https:\/\/api\.rr\.tv\/ad\/getAll requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
 http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requires-body=1,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/rrtv.js
@@ -29,12 +29,12 @@ http-response ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail requ
 # Redirect Google Search/Maps Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
-# 115网盘签到变离线
+# 115网盘签到转为离线
 ^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
-# 抖音去开屏去广告无水印
+# 抖音去开屏去广告兼无水印
 ^https?:\/\/(api.*\.amemv|aweme\.snssdk)\.com\/api\/ad\/ - reject
 ^https?:\/\/api.*\.amemv\.com\/aweme\/v\d\/(?!(comment|namek|series|shop)) https://aweme.snssdk.com/aweme/v1/ header
-# 人人视频
+# 人人视频VIP
 ^https:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail\?(.+)quality=\w+(.+) https://api.rr.tv/drama/app/get_combined_drama_detail?(.+)quality=AI_OD(.+) 302
 
 
