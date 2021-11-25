@@ -39,3 +39,5 @@
 * [@Orz-3](https://github.com/Orz-3/mini) 可用图标
 
 * [@Peng-YM](https://github.com/Peng-YM/Sub-Store) Sub-Store
+
+* [@githubdulong](https://github.com/githubdulong/Script/tree/master/Surge) Surge脚本和模块
