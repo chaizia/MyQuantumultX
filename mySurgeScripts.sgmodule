@@ -1,10 +1,10 @@
 #!name=请叫我英俊柴
-#!desc=常用淘宝、京东、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音等脚本
+#!desc=常用淘宝、京东、美团、百度云、WPS、彩云、115、抖音、人人视频、抖音(≤16.2.0)等脚本
 
 [MITM]
 hostname = %APPEND% www.google.cn,api.m.jd.com,trade-acs.m.taobao.com,pan.baidu.com,account.wps.cn,biz.caiyunapp.com,*.115.com,api*.amemv.com,aweme.snssdk.com,api.rr.tv
 [Script]
-# 比价脚本
+# 比价脚本 （淘宝若未加载脚本运行，得卸载重装）
 淘宝比价 = type=http-response,requires-body=1,max-size=0,pattern=^http://.+/amdc/mobileDispatch,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 淘宝比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail,script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
 京东比价 = type=http-response,requires-body=1,max-size=0,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://service.2ti.st/QuanX/Script/jd_tb_price/main.js
