@@ -1,3 +1,4 @@
+#  停止更新，合并到另外一个项目 [Profiles](https://github.com/chaizia/Profiles) 
 # 个人常用QuantumultX-Script
 
 ![an0na’s github stats](https://github-readme-stats.vercel.app/api?username=chaizia&show_icons=true&theme=merko)
